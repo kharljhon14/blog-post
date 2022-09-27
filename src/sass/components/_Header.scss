@@ -1,0 +1,38 @@
+.header {
+   background-color: $primary-color-dark;
+   padding: 2rem 0;
+}
+
+.navigation {
+   display: flex;
+   align-content: center;
+   justify-content: space-around;
+   list-style: none;
+
+   &__item {
+      font-size: 1.75rem;
+      position: relative;
+
+      &::before {
+         content: "";
+         position: absolute;
+         top: 100%;
+         background-color: $secondary-color-light;
+         width: 100%;
+         transform: scaleX(0);
+         height: 0.3rem;
+         transition: all 0.3s;
+      }
+
+      &:hover::before {
+         transform: scaleX(1);
+      }
+
+      &-link {
+         position: relative;
+         text-transform: uppercase;
+         text-decoration: none;
+         color: $primary-color-light;
+      }
+   }
+}

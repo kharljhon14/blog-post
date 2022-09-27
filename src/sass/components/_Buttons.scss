@@ -1,0 +1,25 @@
+.btn {
+   padding: 1rem;
+   font-size: 1.75rem;
+   font-weight: 400;
+   font-family: inherit;
+   text-transform: uppercase;
+   background-color: $primary-color-dark;
+   color: $primary-color-light;
+   border-radius: 0.6rem;
+   cursor: pointer;
+
+   &-gray,
+   &-red {
+      padding: 0.5rem 2rem;
+   }
+
+   &-gray {
+      background-color: $primary-color;
+      margin-right: 2rem;
+   }
+
+   &-red {
+      background-color: $secondary-color-dark;
+   }
+}

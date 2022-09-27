@@ -1,0 +1,28 @@
+.table {
+   width: 100%;
+   border: 0.2rem solid $primary-color-dark;
+   border-collapse: collapse;
+   background-color: $primary-color-light;
+   color: $primary-color-dark;
+
+   & td,
+   & th {
+      border: 0.1rem solid $primary-color-dark;
+   }
+
+   & th {
+      padding: 2rem 0;
+      font-size: 1.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+   }
+
+   & td {
+      padding: 1rem;
+      font-size: 1.5rem;
+      font-weight: 300;
+      &:last-of-type {
+         text-align: center;
+      }
+   }
+}
