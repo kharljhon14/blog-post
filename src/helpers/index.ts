@@ -2,7 +2,7 @@ export const getCurrentDate = () => {
    const today = new Date();
 
    return today.toLocaleDateString("en-US", {
-      year: "2-digit",
+      year: "numeric",
       month: "2-digit",
       day: "2-digit",
    });
