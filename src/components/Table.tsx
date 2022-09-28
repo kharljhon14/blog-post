@@ -4,11 +4,12 @@ import TableItem from "./TableItem";
 interface props {
    articles: Array<Article>;
    onDeleteArticle: (id: string) => void;
+   onSelectArticle: (artcle: Article) => void;
 }
 
-const Table = ({ articles, onDeleteArticle }: props) => {
+const Table = ({ articles, onDeleteArticle, onSelectArticle }: props) => {
    const renderItems = articles.map((article) => {
-      return <TableItem key={article.id} article={article} onDeleteArticle={onDeleteArticle}/>;
+      return <TableItem key={article.id} article={article} onDeleteArticle={onDeleteArticle} onSelectArticle={onSelectArticle} />;
    });
 
    return (

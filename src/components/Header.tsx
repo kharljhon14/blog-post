@@ -1,19 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Article from "../models/article";
 
-const Header = () => {
+interface props {
+   onCreateNew: () => void;
+   selectedArticle: Article| undefined;
+}
+
+const Header = ({ onCreateNew, selectedArticle }: props) => {
    return (
       <nav className="header">
          <ul className="navigation">
             <li className="navigation__item">
-               <Link className="navigation__item-link" to="/">
+               <Link onClick={onCreateNew} className="navigation__item-link" to="/">
                   HOME
                </Link>
             </li>
             <li className="navigation__item">
-               <Link className="navigation__item-link" to="/create">
-                  Create New Article
-               </Link>
+               {selectedArticle === undefined ? (
+                  <Link onClick={onCreateNew} className="navigation__item-link" to="/form">
+                     Create New Article
+                  </Link>
+               ) : (
+                  ""
+               )}
             </li>
          </ul>
       </nav>
